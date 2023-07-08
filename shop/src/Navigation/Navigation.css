@@ -1,0 +1,44 @@
+
+
+.navigation-container {
+    background-color: var(--second-bg);
+    position: fixed;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.205);
+    transition: all .2s;
+    
+}
+.navigation-container a { text-decoration: none; color: var(--second-text); }
+.navigation-container h1 {
+    align-self: center;
+    height: fit-content;
+    width: fit-content;
+    text-align:center;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    transition: all .2s;
+}
+
+.fake-container {
+    width: 100vw;
+    height: 5rem;
+}
+
+.navigation-switched-block {
+    color: var(--second-bg);
+    border-radius: 90px;
+    padding-left:  15px;
+    padding-right: 15px;
+    margin-left:  -15px;
+    margin-right: -15px;
+    
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.29);
+    background-color: var(--second-text);
+    transition: all .2s;
+}

@@ -1,0 +1,145 @@
+p,
+h1,
+textarea,
+input,
+body {
+    margin: 0;
+}
+
+
+.container_bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    padding: 10px;
+    background-color: var(--main);
+    color: var(--text);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    height: fit-content;
+    width: 70%;
+    align-self: center;
+    transition: all var(--transition-duration);
+}
+
+.container button {
+    background-color: var(--secondary-main);
+    color: var(--main);
+    border-radius: var(--border-radius);
+    border: none;
+    width: 20%;
+    align-self: center;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: var(--font-size-text);
+}
+
+.heading {
+    margin-top: 100px;
+    background-color: var(--secondary-main);
+    color: var(--main);
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration);
+
+}
+
+.heading h1,
+.heading input {
+    background-color: transparent;
+    text-align: center;
+    color: var(--main);
+    font-size: 45px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding: 0px;
+}
+
+.heading p {
+    font-size: --font-size-text;
+    letter-spacing: 1px;
+}
+
+
+.container p:hover,
+.container input:hover,
+.container textarea:hover,
+.container label:hover {
+
+    color: var(--accent);
+    transition: all var(--transition-duration);
+}
+
+textarea,
+input {
+    border: none;
+    white-space: pre-line;
+    background-color: var(--main);
+    color: var(--text);
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    overflow: hidden;
+    resize: vertical;
+    height: fit-content;
+}
+
+#text {
+    outline: 2px solid var(--accent);
+    border-radius: var(--border-radius);
+    padding-left: 10px;
+}
+
+.article p {
+    border: none;
+    white-space: pre-line;
+    background-color: var(--main);
+    color: var(--text);
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+}
+
+.article {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article p,
+.article textarea,
+.article input {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#author {
+    background-color: var(--accent);
+    color: var(--main);
+    width: fit-content;
+    margin-left: 15px;
+    padding: 0 10px 0 10px;
+    border-radius: var(--border-radius);
+}
+
+#note {
+    opacity: 0.5;
+}
+
+.image-container {
+    max-width: 100vh;
+    align-self: center;
+    margin: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.image-container img {
+
+    border-radius: var(--border-radius);
+}

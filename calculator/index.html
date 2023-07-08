@@ -1,0 +1,47 @@
+<html>
+<body>
+    <div id="app"> </div>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function Calculator() {
+            const buttons = ['1', '2', '3', '+', '4', '5', '6','-', '7', '8', '9', '*', 'Erase', '0','Enter', '/'];
+            const operators = ['+','-', '*', '/'];
+            const [input, setInput] = React.useState('');
+
+            function validate(string) {
+                return !(/[a-zA-Z]/).test(string)  && !(operators.includes(string.slice(-1)) && operators.includes(string.slice(-2, -1)))
+            }
+
+            function handleClick({target}) {
+                let txt = target.innerHTML.trim();
+                console.log( input + txt )
+                if ( txt == 'Erase' ) setInput(input.slice(0, -1));
+                else if ( txt== 'Enter' )  setInput(eval(input));
+                else if ( validate(input + txt) ) setInput(input + txt)
+            }
+
+            function handleInput({target}) {
+                if (validate(target.value))
+                setInput(target.value)
+            }
+
+            return (
+                <div className="calculator_grid">
+                    <input value={input} onInput={handleInput} type="text"/>
+                    {buttons.map((title) => (
+                        <button className="calculator_button" key={title} onClick={handleClick}> {title} </button>
+                ))}
+                </div>    
+            );
+        }
+
+        ReactDOM.render(<Calculator/>, app);
+    </script>
+</body>
+</html>
