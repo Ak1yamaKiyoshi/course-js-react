@@ -6,25 +6,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: gray;
+  background-color: var(--color-main) ;
 }
 
 a {text-decoration: none;
 
 }
-
 :root {
-  
-  --color-accent: white;
-  --color-main: white;
-  --color-secondary: white;
+  --color-secondary: rgb(141, 141, 141);
+  --color-main: rgb(244, 244, 244);
+  --color-accent: rgb(119, 63, 211);
+
+  --color-accent-lighter: rgb(181, 134, 248);
+  --color-accent-darker: rgb(39, 7, 94);
   
   --br-round: 90px;
 
   --ff: Arial, Helvetica, sans-serif;  
 
-  --fs-small: 10px;
+  --fs-small:  10px;
   --fs-medium: 20px;
-  --fs-large: 30px;
-  --fs-extra: 40px;
+  --fs-large:  30px;
+  --fs-extra:  40px;
 }

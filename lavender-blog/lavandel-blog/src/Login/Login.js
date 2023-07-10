@@ -39,10 +39,12 @@ export default function Login() {
         <input id="login-username-input" onChange={handleInput} />
         <p> Password </p>
         <input id="login-password-input" onChange={handleInput}/>
-        <h2 onClick={handleLoginClick}> login </h2>
-        <Link to="../home" onClick={() => {dispatch(unlog())}}> 
-            <h3>  Not admin </h3>
-        </Link>
+        <div className="login-buttons">
+            <h2 className="login-as-admin" onClick={handleLoginClick}> login </h2>
+        </div>
+            <Link to="../home" onClick={() => {dispatch(unlog())}}> 
+                <h2>  Not admin </h2>
+            </Link>
         </div>
     </div>);
 }

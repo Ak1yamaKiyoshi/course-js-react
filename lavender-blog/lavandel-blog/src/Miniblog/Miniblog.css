@@ -1,0 +1,14 @@
+
+
+.miniblog-inner-view {
+    box-shadow:  7px 7px 15px var(--color-secondary),
+     -7px -7px 15px var(--color-main);
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+

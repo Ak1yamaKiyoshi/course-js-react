@@ -1,0 +1,98 @@
+.login-outer-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login-inner-container {
+    box-shadow: 7px 7px 15px var(--color-secondary),
+    -7px -7px 15px var(--color-main);
+    transition: all .1s;
+    height: fit-content;
+    padding: 50px;
+    border-radius: 50px;
+    margin-top: 20vh;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-inner-container input {
+    box-shadow: inset 7px 7px 15px var(--color-secondary),
+    inset -7px -7px 15px var(--color-main);
+    height: 45px;
+    padding-left: 20px;
+    width: 400px;
+    background-color: var(--color-main);
+    border: none;
+    font-size: var(--fs-medium);
+    border-radius: var(--br-round);
+    transition: all .1s;
+}
+.login-inner-container input:focus {
+    background: var(--color-accent);
+    color: var(--color-main);
+    outline: none;
+    box-shadow: inset 7px 7px 15px var(--color-accent-darker),
+    inset  5px -7px 15px var(--color-accent-lighter);
+    height: 45px;
+    border: none;
+    border-radius: var(--br-round);
+    transition: all .1s;
+}
+
+
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    width: 250px;
+    font-size: var(--fs-medium);
+    margin-top: 45px;
+
+    border-radius: var(--br-round);
+    background-color: var(--color-accent);
+
+     text-align: center;
+     transition: all .1s;
+}
+.login-buttons link{
+    text-align: center;
+    color: var(--color-main);
+    transition: all .1s;
+}
+.login-buttons a:hover{
+    text-align: center;
+    box-shadow: inset 7px 7px 15px var(--color-secondary),
+    inset  0px 50px var(--color-main);
+    transition: all .1s;
+}
+
+.login-buttons:hover {
+
+     transition: all .1s;
+    transform: scale(1.2);
+     box-shadow: inset 7px 7px 15px var(--color-secondary),
+      inset  0px 50px var(--color-main);
+      
+
+}
+.login-buttons h2:hover {
+    color: var(--color-accent);
+    transition: all .1s;
+}
+.login-buttons h2 {
+    margin: 4px;
+    text-align: center;
+    color: var(--color-main);
+    transition: all .1s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

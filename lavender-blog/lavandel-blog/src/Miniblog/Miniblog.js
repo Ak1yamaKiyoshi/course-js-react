@@ -24,6 +24,7 @@ export default function Miniblog({index}) {
     return (<div className="miniblog-container">
 
       <div className="miniblog-inner-view">
+          <Link to={query}> 
         <div className="miniblog-view-header-container">
           <h1> {title}     </h1>
           <h2> by {author} </h2>
@@ -33,9 +34,8 @@ export default function Miniblog({index}) {
           <div className="miniblog-view-article-container">
             <p id="miniblog-content"> {content.substring(0, 250) + ". . ."} </p>
           </div>
-          { <Link to={query}> 
-            <h1> View </h1>
-          </Link> }
+            
+          </Link> 
           </div>
         </div>
     )
