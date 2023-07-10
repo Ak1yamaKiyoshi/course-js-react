@@ -23,7 +23,6 @@ export default function Blog({index}) {
     const [content, setContent] = React.useState(blogs[index].content);
     const [date, setDate] =       React.useState(blogs[index].date);
     const [editing, setEditing] = React.useState(false);
-    //console.log(blogs, title, author, content, date, editing, isLogged)
 
     function handleInput(e) {
         let id = e.target.id.trim(); 
@@ -37,7 +36,7 @@ export default function Blog({index}) {
     }
 
     function confirmBlog() {
-        setDate(new Date().toLocaleDateString("en-EN", { weekday: 'long', day: "numeric", month:'long', year: 'numeric'}))
+        setDate(new Date().toLocaleDateString("en-EN", { day: "numeric", month:'long'}))
         dispatch(update({
             index: index,
             new: {

@@ -21,23 +21,24 @@ export default function Miniblog({index}) {
     const [editing, setEditing] = React.useState(false);
     let query = `/home/blog_${index}`
 
-    return (<div className="blog-container">
+    return (<div className="miniblog-container">
 
-      <div className="blog-inner-view">
-        <div className="blog-view-header-container">
+      <div className="miniblog-inner-view">
+        <div className="miniblog-view-header-container">
           <h1> {title}     </h1>
           <h2> by {author} </h2>
           <h3> {date}      </h3>
-            <div />
-            <div className="blog-view-article-container">
-              <p id="blog-content"> {content} </p>
-            </div>
-            { <Link to={query}> 
-              <h1> View </h1>
-            </Link> }
-            </div>
         </div>
-    </div>)
+
+          <div className="miniblog-view-article-container">
+            <p id="miniblog-content"> {content.substring(0, 250) + ". . ."} </p>
+          </div>
+          { <Link to={query}> 
+            <h1> View </h1>
+          </Link> }
+          </div>
+        </div>
+    )
     
 
    
