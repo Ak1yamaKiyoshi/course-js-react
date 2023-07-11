@@ -9,18 +9,29 @@ body {
   background-color: var(--color-main) ;
 }
 
-a {text-decoration: none;
-
-}
+a:link {
+  color: var(--color-accent);
+  text-decoration: none;}
 :root {
   --color-secondary: rgb(141, 141, 141);
   --color-main: rgb(244, 244, 244);
   --color-accent: rgb(119, 63, 211);
 
-  --color-accent-lighter: rgb(181, 134, 248);
+  --color-accent-lighter: rgb(154, 102, 252);
   --color-accent-darker: rgb(39, 7, 94);
   
   --br-round: 90px;
+
+  --box-shadow-usual: 
+   7px 7px 15px var(--color-secondary),
+     -7px -7px 15px var(--color-main);;
+     
+  --box-shadow-usual-inset: inset 7px 7px 15px var(--color-secondary),
+  inset -7px -7px 15px var(--color-main);
+  
+  --box-shadow-accent-inset:
+  inset 7px 7px 15px var(--color-accent-darker),
+  inset  5px -7px 15px var(--color-accent-lighter); 
 
   --ff: Arial, Helvetica, sans-serif;  
 

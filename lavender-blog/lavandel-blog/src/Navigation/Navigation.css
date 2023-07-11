@@ -1,40 +1,46 @@
 .navigation-outer-container {
+    background-color: var(--color-main);
     position: fixed;
     display: flex;
-    justify-content: center;
-    background-color: var(--color-main);
-    width: 100vw;
+    flex-direction: row;
 
+    justify-content: center;
+    background-color: var(--color-accent);
+    width: 100%;
+    box-shadow: var(--box-shadow-usual);
+    z-index: 10;
 }
 
 .navigation-inner-container {
-    height: min-content;
+    height: 65px;
     display: flex;
-    padding: 5px;
-    display: flex;
+    padding: 0px;
     flex-direction: row ;
     justify-content: center;
     margin: 5px;
-    width: 80vw;
+    margin: 10px;
+    width: 60vw;
     align-items: center;
     border-radius: var(--br-round);
-    
-    box-shadow: inset 7px 7px 15px var(--color-secondary),
-    inset -7px -7px 15px var(--color-main);
+
+    box-shadow: var(--box-shadow-accent-inset);
     transition: all .1s;
 }
 
 #login-button {
-    color: var(--color-accent);
+    color: var(--color-main);
+    position: absolute;
+    margin-left: 2.5%;
+    transition: all .5s ;
 }
+
 
 .navigation-inner-container h1 {
     font-family: var(--ff);
     font-size: var(--fs-extra);
-    color: var(--color-accent);
+    color: var(--color-main);
     letter-spacing: 5px;
     vertical-align: middle;
-    margin: 0;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -43,7 +49,6 @@
 
 .navigation-inner-container img {
     height: 50px;
-    margin: 0;
     margin: 8px;
     text-align: center;
     border-radius: var(--br-round);
@@ -52,19 +57,21 @@
 
 .navigation-inner-container:hover {
     border-radius: var(--br-round);
-    background: var(--color-accent);
-    box-shadow: inset 7px 7px 15px var(--color-accent-darker),
-    inset -7px -7px 15px var(--color-accent-lighter);
-
+    background: var(--color-main);
+  
+    box-shadow: var(--box-shadow-usual-inset);
     transition: all .5s;
     
 }
 
 #login-button:hover{
-    color: var(--color-main);
+    transform: scale(1.4);
+    transition: all .5s ;
 }
+
 .navigation-inner-container h1:hover {
-    color: var(--color-main);
+
+    color: var(--color-accent);
     transform: scale(1.05);
     transition: all .5s;
 }

@@ -27,6 +27,7 @@ export default function Miniblog({index}) {
           <Link to={query}> 
         <div className="miniblog-view-header-container">
           <h1> {title}     </h1>
+          
           <h2> by {author} </h2>
           <h3> {date}      </h3>
         </div>

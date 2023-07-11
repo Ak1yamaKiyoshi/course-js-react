@@ -49,29 +49,63 @@ export default function Blog({index}) {
 
 
     function view() {
-        return (<div className="blog-container">
+        return (<div className="blog-outer-container">
+        <div className="blog-inner-container">
             <div className="blog-inner-view">
                 <div className="blog-view-header-container">
-                    <h1> {title} </h1>
-                    <h2> by {author} </h2>
-                    <h3> {date} </h3>
-                    <div />
-                    <div className="blog-view-article-container">
-                        <p id="blog-content"> {content} </p>
+                    <div className="blog-header-"> 
+                        <h1> {title} </h1>
+                        <h2> by {author} </h2>
+                        <h3> {date} </h3>
                     </div>
+                    <div className="blog-view-article-container">
                     {(isLogged)
                         ? (<button onClick={() => { 
                             setEditing(true) 
                         }}> Edit 
                         </button>)
                     : (<></>)}
+                        <p id="blog-content"> {content} </p>
+                    </div>
                 </div>
             </div>
-        </div>)
+        </div></div>)
     }
 
     function edit() {
-        return (<div className="blog-container">
+        return (<div className="blog-outer-container">
+        <div className="blog-inner-container">
+            <div className="blog-inner-view">
+                <div className="blog-view-header-container">
+                    <div className="blog-header-"> 
+                    <input onChange={handleInput}  id="blog-title" type="text" value={title} />
+                    <input onChange={handleInput}  id="blog-author" value={author} /> <h2 />
+                    <h3> {date} </h3>
+                    </div>
+                    <div className="blog-view-article-container">
+                    <div className="blog-buttons"> 
+                                <button onClick={() => { 
+                                    setEditing(false);
+                                    confirmBlog();
+                                }}> Edit </button>
+                                                <button onClick={() => {
+                                let blogsNew = [...blogs];
+                                blogsNew.splice(index.payload, 1);
+                                dispatch(remove(index))
+                                dispatch( updateAllRoutes(blogsNew) );
+                                navigate("/home");
+                                
+                            }}
+                            > X </button>   
+                    </div>
+                        <textarea id="blog-content" onChange={handleInput} value={content} />
+                    </div>
+                </div>
+            </div>
+        </div></div>)
+    }
+    /*
+    (<div className="blog-container">
             <div className="blog-inner-edit">
                 <div className="blog-edit-header-container">
                     <input onChange={handleInput}  id="blog-title" type="text" value={title} />
@@ -90,7 +124,7 @@ export default function Blog({index}) {
                     let blogsNew = [...blogs];
                     blogsNew.splice(index.payload, 1);
                     dispatch(remove(index))
-                    dispatch(updateAllRoutes(blogsNew));
+                    dispatch( updateAllRoutes(blogsNew) );
                     navigate("/home");
                     
                 }}
@@ -99,8 +133,7 @@ export default function Blog({index}) {
                 </div>
             </div>
         </div>)
-    }
-
+    */
     return (<>
         {(!editing) ? view() : edit()}
     </>

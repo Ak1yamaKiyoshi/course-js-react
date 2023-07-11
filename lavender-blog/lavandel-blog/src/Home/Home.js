@@ -31,14 +31,16 @@ export default function Home() {
 
     return (
         <div className="home-outer-container">
-            { (isLogged) ? <h1> Logged as admin </h1> : <></>}
-            <h1> Home </h1>
-            <div className="menu-blogs-container">
-            {blogs.map(e => (
-                <Miniblog index={blogs.indexOf(e)}/>
-            ))}
-            { (isLogged) ? <button onClick={createBlog}><h1> Add blog </h1> </button>: <></>}
-            </div> 
+            <div className="home-outer-second-container"> 
+                { (isLogged) ? <h1> Logged as admin </h1> : <></>}
+                
+                <div className="menu-blogs-container">
+                    {blogs.map(e => (
+                        <Miniblog index={blogs.indexOf(e)}/>
+                    ))}
+                    { (isLogged) ? <button onClick={createBlog}><h1> Add blog </h1> </button>: <></>}
+                </div> 
+            </div>
         </div>
     );
 }
