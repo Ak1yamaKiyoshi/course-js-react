@@ -1,0 +1,49 @@
+
+.date-widget-container {
+    align-self: center;
+    margin: 10px;
+    width: 197px;
+    height: 30px; 
+    background-color: transparent;
+    font-family: var(--font);
+}
+
+.date-widget-date {
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    color: var(--another);
+    background-color: var(--darker-secondary);
+    border-radius: var(--border-round-big);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.date-widget-date p {
+    text-align: left;
+    margin: 0;
+    margin-top: 7%;
+    width: fit-content;
+    margin-left: 4%;
+    font-size: 12px;
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.date-widget-current-date {
+    width: 154px;
+    height: 24px;
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 32.5%;
+    flex-shrink: 0;
+    background-color: var(--secondary);
+    border-radius: var(--border-round-big);
+}
+
+.date-widget-current-date p {
+    margin-top: 4%;
+}

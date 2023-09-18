@@ -1,0 +1,49 @@
+:root {
+    --darker-secondary: #F1C376;
+    --another:          #606C5D;
+    --primary:          #555555;
+    --text:             #F7E6C4;
+    --secondary:        #FFF4F4;
+    --border-round-small: 20px;
+    --border-round-big:   90px;
+    --font: 'Overpass', sans-serif;
+}
+
+.notes-container {
+    background-color: var(--another);
+    width: 265px;
+    margin: 5px;
+    height: 130px;
+    text-decoration: underline var(--text) 2px;
+    border-radius: 15px;    
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.notes-container  textarea{ 
+    border: none;
+    align-self: center;
+    font-size: 12px;
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    flex-shrink: 0;
+    outline: none;
+    border-radius: var(--border-round-small);
+    text-align: left;
+    overflow:hidden;
+    background-color: transparent;
+    resize: none;
+
+    height: 60px;
+    margin-top: 0.75%;
+    color: var(--text);
+    width: 83.3%;
+ 
+    padding-top: 4px;
+    margin-right: 3px;
+    padding-left: 10px;
+}

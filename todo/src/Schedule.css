@@ -1,0 +1,44 @@
+.add-schedule-element {
+    width: 35px;
+    height: 24px;
+    border-radius: 0px 90px 90px 0px;
+    background: var(--secondary);
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 21px;
+    color: var(--another);
+    align-self: center;    
+
+}
+.schedule-button-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+.del-schedule-element {
+    width: 35px;
+    height: 24px;
+    border-radius: 90px 0px 0px 90px;
+    background: var(--secondary);
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 21px;
+    color: var(--another);
+    align-self: center;    
+
+} 
+.add-schedule-element div {
+    align-self: center;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+}

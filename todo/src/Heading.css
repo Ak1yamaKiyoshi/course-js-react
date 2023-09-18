@@ -1,0 +1,37 @@
+
+.heading-widget-container {
+    margin: 10px;
+    position: relative;
+    width: 120px;
+    height: 30px; 
+    background-color: transparent;
+    font-family: var(--font);
+    align-self: center;
+    
+}
+
+.heading-widget-text {
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    color: var(--another);
+    background-color: var(--darker-secondary);
+    border-radius: var(--border-round-big);
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.heading-widget-text p {
+    margin: 0;
+    margin-top: 7%;
+    width: fit-content;
+    
+    font-size: 12px;
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
